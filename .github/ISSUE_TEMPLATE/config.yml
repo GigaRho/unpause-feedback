@@ -1,0 +1,6 @@
+# Blank issues are off: bugs and crashes use the forms, everything else goes to Discussions.
+blank_issues_enabled: false
+contact_links:
+  - name: Share an idea, a thought or a question
+    url: https://github.com/GigaRho/unpause-feedback/discussions/new/choose
+    about: Ideas, thoughts and questions live in Discussions, where others can vote and reply.

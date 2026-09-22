@@ -1,0 +1,41 @@
+# Issue form for the public feedback repository (GigaRho/unpause-feedback). Copy this folder to
+# `.github/ISSUE_TEMPLATE/` there. Unpause pre-fills `what`, `expected` and `diagnostics` from
+# Settings › Help & feedback; the player reviews every line before pressing Submit.
+name: Bug report
+description: Something in Unpause did not work as it should.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please keep game file names, folders and anything personal out of it;
+        Unpause's own diagnostics block is already scrubbed. Nothing here may point at where to obtain
+        game files, BIOS files or keys.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did and what Unpause did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: The block from Settings › Help & feedback (versions, device, the last launch, log lines). Paste it as is.
+      render: text
+    validations:
+      required: false
+  - type: checkboxes
+    id: thanks
+    attributes:
+      label: Release notes
+      options:
+        - label: You may thank me by GitHub handle in the release notes.

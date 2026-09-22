@@ -1,0 +1,36 @@
+# Workflow for the public feedback repository (GigaRho/unpause-feedback). Copy this file to
+# `.github/workflows/` there. GitHub answers a "new issue" link that carries `labels=` with a 404
+# for anyone who cannot label issues, so Unpause's links carry no labels: the form adds `bug` or
+# `crash`, and this job adds the `device:` label from the diagnostics block, with the same rule as
+# `unpause_core::feedback::device_label`. Public repository: Actions minutes are free.
+name: Label the device
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || "";
+            const device = (body.match(/^Device: (.*)$/m) || [])[1] || "";
+            const os = (body.match(/^Unpause \S+ \(\S+\) on (\w+) /m) || [])[1] || "";
+            let label = "";
+            if (/handheld|Ally|Legion|Claw/.test(device)) label = "device:handheld";
+            else if (/Deck/.test(device)) label = "device:deck";
+            else if (["windows", "linux", "macos"].includes(os)) label = `device:${os}`;
+            if (!label) return;
+            const have = context.payload.issue.labels.map((l) => l.name);
+            if (have.includes(label)) return;
+            await github.rest.issues.addLabels({
+              ...context.repo,
+              issue_number: context.payload.issue.number,
+              labels: [label],
+            });

@@ -1,0 +1,34 @@
+# Issue form for the public feedback repository (GigaRho/unpause-feedback): a launch or Unpause
+# itself crashed. Unpause pre-fills the fields from "Report this" on the Recovery screen.
+name: Crash report
+description: A launch ended in a crash, or Unpause itself crashed.
+title: "Crash: "
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Emulator crashes are reported as Unpause diagnoses; the emulator's own tracker is the place
+        for emulator bugs. Keep game file names and anything personal out of the text; the
+        diagnostics block is already scrubbed.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Which console, which emulator, and what you were doing.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: false
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: The block from the Recovery screen or Settings › Help & feedback. Paste it as is.
+      render: text
+    validations:
+      required: true
