@@ -51,3 +51,9 @@ patch notes.
 - Nothing here may point at where to get game files, BIOS files or keys. Such posts are removed.
 - Emulator bugs belong on the emulator's own tracker; Unpause reports what it saw when it launched one.
 - Be kind: [CODE_OF_CONDUCT.md](https://github.com/GigaRho/unpause-feedback/blob/main/.github/CODE_OF_CONDUCT.md).
+
+## Trademarks
+
+Unpause is not affiliated with or endorsed by Valve, Microsoft, Sony, Nintendo, Sega, Epic Games, GOG, Blizzard, ASUS,
+Lenovo or MSI. Steam and Steam Deck are trademarks of Valve Corporation; Xbox is a trademark of the Microsoft group of
+companies; other names are trademarks of their owners.
