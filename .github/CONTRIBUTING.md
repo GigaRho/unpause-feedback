@@ -2,6 +2,15 @@
 
 Thank you for taking the time. A good report is usually fixed in the next release; a vague one waits for questions.
 
+## What you post here
+
+Everything you post in this repository is public. Anyone can read it, and it can be shown next to your name or
+handle. Do not post anything you want kept private or confidential.
+
+By posting, you let Unpause use what you write: read it, copy it, quote it, change it and build on it to plan and
+make the product. You keep your rights to what you wrote. Unpause does not pay for feedback and does not have to
+credit it. If you would rather not share an idea, keep it to yourself.
+
 ## A bug or a crash
 
 1. **Start from Unpause if you can**: Settings › Help & feedback, or **Report this** on the Recovery screen. The form arrives

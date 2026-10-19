@@ -12,6 +12,9 @@ body:
         Thanks for the report. Please keep game file names, folders and anything personal out of it;
         Unpause's own diagnostics block is already scrubbed. Nothing here may point at where to obtain
         game files, BIOS files or keys.
+
+        What you post here is public. By posting, you let Unpause use it to plan and make the product,
+        and you keep your rights to it. Do not post anything you want kept confidential.
   - type: textarea
     id: what
     attributes:

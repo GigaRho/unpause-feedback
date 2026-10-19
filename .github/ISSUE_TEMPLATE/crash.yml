@@ -11,6 +11,9 @@ body:
         Emulator crashes are reported as Unpause diagnoses; the emulator's own tracker is the place
         for emulator bugs. Keep game file names and anything personal out of the text; the
         diagnostics block is already scrubbed.
+
+        What you post here is public. By posting, you let Unpause use it to plan and make the product,
+        and you keep your rights to it. Do not post anything you want kept confidential.
   - type: textarea
     id: what
     attributes:
