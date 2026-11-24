@@ -30,7 +30,7 @@ fast](https://github.com/GigaRho/unpause-feedback/blob/main/.github/CONTRIBUTING
 
 ## What happens next
 
-Every new report gets a first answer within a week. The labels tell you where it stands:
+We read every report. Response times vary. The labels tell you where it stands:
 
 | Label | Meaning |
 |---|---|
@@ -42,8 +42,8 @@ Every new report gets a first answer within a week. The labels tell you where it
 | `device:…` | Where it happened; added from your diagnostics. |
 
 Ideas start in Discussions, where people vote on them. The most‑wanted ones become `idea` issues, and those are what
-Unpause's "What people asked for" list shows, with their status. Reporters who tick the box are thanked by name in the
-patch notes.
+Unpause's "What people asked for" list shows, with their status. With your permission, we may thank you by GitHub
+handle in the release notes.
 
 ## House rules
 

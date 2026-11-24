@@ -2,7 +2,10 @@
 # `.github/workflows/` there. GitHub answers a "new issue" link that carries `labels=` with a 404
 # for anyone who cannot label issues, so Unpause's links carry no labels: the form adds `bug` or
 # `crash`, and this job adds the `device:` label from the diagnostics block, with the same rule as
-# `unpause_core::feedback::device_label`. Public repository: Actions minutes are free.
+# `unpause_core::feedback::device_label`: the Device line's name (a handheld's own, or the class:
+# PC, Mac, device) and a Steam Deck's code name in its brackets, and only these five labels. The
+# Unpause repository runs this script over its golden bodies (sync-public-repos.mjs --self-test).
+# Public repository: Actions minutes are free.
 name: Label the device
 
 on:
@@ -21,10 +24,11 @@ jobs:
           script: |
             const body = context.payload.issue.body || "";
             const device = (body.match(/^Device: (.*)$/m) || [])[1] || "";
+            const name = device.split(" (")[0];
             const os = (body.match(/^Unpause \S+ \(\S+\) on (\w+) /m) || [])[1] || "";
             let label = "";
-            if (/handheld|Ally|Legion|Claw/.test(device)) label = "device:handheld";
-            else if (/Deck/.test(device)) label = "device:deck";
+            if (/Jupiter|Galileo/.test(device)) label = "device:deck";
+            else if (name && !["PC", "Mac", "device"].includes(name)) label = "device:handheld";
             else if (["windows", "linux", "macos"].includes(os)) label = `device:${os}`;
             if (!label) return;
             const have = context.payload.issue.labels.map((l) => l.name);
